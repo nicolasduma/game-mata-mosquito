@@ -1,0 +1,42 @@
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.conteiner-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    height: 420px;
+}
+
+.conteiner-start-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+select {
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 10px;
+    background-color: rgb(1, 150, 1);
+    border: solid 2px rgb(1, 120, 1);
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+}

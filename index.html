@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mata Mosquito - Iniciar jogo</title>
     <link rel="stylesheet" href="assets/style/reset.css">
+    <link rel="stylesheet" href="assets/style/style-page-start.css">
 </head>
-<body>
-    <select name="" id="">
-        <option value="" selected>-- Selecione o nível --</option>
-        <option value="">Fácil</option>
-        <option value="">Normal</option>
-        <option value="">Difícil</option>
-    </select>
 
-    <button type="submit">Iniciar Jogo</button>
+<body>
+    <div class="conteiner-main">
+        <img id="logo" src="assets/images/game.png" alt="Mata Mosquito">
+
+        <form method="GET" action="assets/pages/game.html">
+            <div class="conteiner-start-game">
+                <select>
+                    <option selected disabled>-- Selecione o nível --</option>
+                    <option value="l1">Fácil</option>
+                    <option value="l2">Normal</option>
+                    <option value="l3">Difícil</option>
+                </select>
+
+            <button onclick="startGame()">Iniciar Jogo</button>
+        </div>
+        </form>
+    </div>
 </body>
+
 </html>
