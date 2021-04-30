@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* GENERAL CLASS */
+.conteiner {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-attachment: cover;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.btn-game {
+    padding: 10px 12px;
+    border: solid 2px rgb(0, 80, 0);
+    border-radius: 5px;
+    background-color: green;
+    font-size: 20px;
+}

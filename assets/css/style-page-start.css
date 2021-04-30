@@ -1,0 +1,16 @@
+#logo {
+    width: 400px;
+    margin-bottom: 5px;
+}
+
+#game-level {
+    margin-bottom: 20px;
+    padding: 10px 30px 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    appearance: none;
+    background-image: url('../images/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: 95% center;
+}
