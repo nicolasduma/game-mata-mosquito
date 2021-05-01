@@ -16,17 +16,19 @@
             <img id="logo" src="assets/images/game.png" alt="Mata Mosquito">
 
             <div class="display-flex flex-direction-column align-items-center" id="conteiner-start-game">
-                <select id="game-level">
+                <select id="game-level" onchange="changeLevel()">
                     <option selected disabled>-- Selecione o nível --</option>
                     <option value="l1">Fácil</option>
                     <option value="l2">Normal</option>
                     <option value="l3">Difícil</option>
                 </select>
 
-                <a class="btn-game" id="btn-start-game" href="#">Iniciar Jogo</a>
+                <a class="btn-game" id="btn-start-game">Iniciar Jogo</a>
             </div>
         </div>
     </div>
+
+    <script src="assets/js/selection-game-level.js"></script>
 </body>
 
 </html>
