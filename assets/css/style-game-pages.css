@@ -1,5 +1,4 @@
 #fly {
-    width: 100px;
     position: absolute;
     z-index: 1;
 }
@@ -45,5 +44,5 @@
 }
 
 .fly-turns {
-    transform: scaleX(-1)
+    transform: scaleX(-1);
 }
