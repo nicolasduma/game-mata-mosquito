@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style-game-pages.css">
 </head>
-<body>
+<body onload="changeFly()">
     <div class="conteiner">
-        <img id="fly" src="../images/fly.png" alt="Mosca">
+        <img id="fly" src="../images/fly.png" alt="Mosca" onload="startTime()">
         <div id="conteiner-lifes-time">
             <div id="conteiner-lifes">
                 <img src="../images/full-heart.png" alt="Coração" id="life1">
@@ -18,12 +18,13 @@
                 <img src="../images/full-heart.png" alt="Coração" id="life3">
             </div>
 
-            <div id="conteiner-time" class="display-flex justify-content-center" onload="changeFly()">
-                <p>Tempo Restante:</p><span id="time">100</span>
+            <div id="conteiner-time" class="display-flex justify-content-center">
+                <p>Tempo Restante:</p><span id="time"></span>
             </div>
         </div>
     </div>
 
     <script src="../js/change-fly.js"></script>
+    <script src="../js/time.js"></script>
 </body>
 </html>
