@@ -55,5 +55,7 @@ function changeFly() {
 
     fly.style.left = flyLeft + "px"
     fly.style.top = flyTop + "px"
+
+    fly.classList.add("opacity-100")
 }
 

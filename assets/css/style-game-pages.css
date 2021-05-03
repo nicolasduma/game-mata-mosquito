@@ -1,5 +1,7 @@
 #fly {
+    max-width: 500px;
     position: absolute;
+    opacity: 0;
     z-index: 1;
 }
 
@@ -45,4 +47,8 @@
 
 .fly-turns {
     transform: scaleX(-1);
+}
+
+#fly.opacity-100 {
+    opacity: 100%;
 }
