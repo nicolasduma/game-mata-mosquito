@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style-game-pages.css">
 </head>
-<body>
+<body onload="changeFly()">
     <div class="conteiner">
-        <img id="fly" src="../images/fly.png" alt="Mosca">
+        <img id="fly" src="../images/fly.png" alt="Mosca" onload="timerToEnd(100)">
         <div id="conteiner-lifes-time">
             <div id="conteiner-lifes">
                 <img src="../images/full-heart.png" alt="Coração" id="life1">

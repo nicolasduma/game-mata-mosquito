@@ -9,20 +9,21 @@
     <link rel="stylesheet" href="../css/style-game-pages.css">
 </head>
 <body>
-    <div class="conteiner">
-        <img id="fly" src="../images/fly.png" alt="Mosca">
-        <div id="conteiner-lifes-time">
-            <div id="conteiner-lifes">
-                <img src="../images/full-heart.png" alt="Coração" id="life1">
-                <img src="../images/full-heart.png" alt="Coração" id="life2">
-                <img src="../images/full-heart.png" alt="Coração" id="life3">
-            </div>
-
-            <div id="conteiner-time" class="display-flex justify-content-center">
-                <p>Tempo Restante:</p><span id="time-to-the-end"></span>
+    <body onload="changeFly()">
+        <div class="conteiner">
+            <img id="fly" src="../images/fly.png" alt="Mosca" onload="timerToEnd(100)">
+            <div id="conteiner-lifes-time">
+                <div id="conteiner-lifes">
+                    <img src="../images/full-heart.png" alt="Coração" id="life1">
+                    <img src="../images/full-heart.png" alt="Coração" id="life2">
+                    <img src="../images/full-heart.png" alt="Coração" id="life3">
+                </div>
+    
+                <div id="conteiner-time" class="display-flex justify-content-center">
+                    <p>Tempo Restante:</p><span id="time-to-the-end"></span>
+                </div>
             </div>
         </div>
-    </div>
 
     <script src="../js/time-to-the-end.js"></script>
     <script>
