@@ -73,7 +73,7 @@ function startTimeChangeFly() {
         lostLifes++
         console.log("perdeu")
         gameOver()
-    }, 3000)
+    }, timeChageFly * 1000)
     stopIntervalByClick(fly, timeChangeFly)
 }
 
