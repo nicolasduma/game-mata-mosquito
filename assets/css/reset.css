@@ -14,12 +14,6 @@ body {
     height: 100vh;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 /* GENERAL CLASS */
 .conteiner {
     max-width: 1400px;
@@ -51,5 +45,8 @@ a {
     border: solid 2px rgb(0, 80, 0);
     border-radius: 5px;
     background-color: green;
+    color: white;
+    text-decoration: none;
     font-size: 20px;
+    cursor: pointer;
 }
