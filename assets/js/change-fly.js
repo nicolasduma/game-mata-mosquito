@@ -2,6 +2,8 @@ function draw(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
+let lostLifes = 0
+
 var verify = {
     width: function (x) {
         if (x === 1) {
@@ -57,5 +59,43 @@ function changeFly() {
     fly.style.top = flyTop + "px"
 
     fly.classList.add("opacity-100")
+}
+
+function stopIntervalByClick(element, interval) {
+    element.addEventListener("click", function() {
+        clearInterval(interval)
+    })
+}
+
+function startTimeChangeFly() {
+    let timeChangeFly = setInterval(function() {
+        changeFly()
+        lostLifes++
+        console.log("perdeu")
+        gameOver()
+    }, 3000)
+    stopIntervalByClick(fly, timeChangeFly)
+}
+
+startTimeChangeFly()
+fly.addEventListener("click", function() {
+    startTimeChangeFly()
+    changeFly()
+    console.log("acertou!")
+})
+
+function gameOver() {
+    if (lostLifes === 1) {
+        document.getElementById("life1").setAttribute("src", "../images/empty-heart.png")
+    }
+    
+    if (lostLifes === 2) {
+        document.getElementById("life2").setAttribute("src", "../images/empty-heart.png")
+    }
+    
+    if (lostLifes === 3) {
+        document.getElementById("life3").setAttribute("src", "../images/empty-heart.png")
+        location.href = "game-over.html"
+    }
 }
 
