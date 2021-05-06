@@ -1,11 +1,7 @@
-function draw(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
-}
+const fly = document.getElementById("fly")
 
-let lostLifes = 0
-
-var verify = {
-    width: function (x) {
+var change = {
+    width: function(x) {
         if (x === 1) {
             fly.classList.add("fly-width-120")
         }
@@ -27,14 +23,16 @@ var verify = {
         }
     },
 
-    turns: function (x) {
+    turns: function(x) {
         if (x === 2) {
             fly.classList.add("fly-turns")
         }
     }
 }
 
-const fly = document.getElementById("fly")
+function draw(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
 function changeFly() {
     fly.classList.remove("fly-width-120")
@@ -44,13 +42,13 @@ function changeFly() {
     fly.classList.remove("fly-width-80")
     fly.classList.remove("fly-turns")
 
-    verify.width(draw(1, 5))
-    verify.turns(draw(1, 2))
+    change.width(draw(1, 5))
+    change.turns(draw(1, 2))
 
     let flyLeft = draw(3, 1200)
     let flyTop = draw(3, 500)
 
-    while (flyLeft > 1000 && flyTop < 200) {
+    while (flyLeft > 1000 && flyTop < 100) {
         flyLeft = draw(3, 1200)
         flyTop = draw(3, 500)
     }
@@ -67,35 +65,55 @@ function stopIntervalByClick(element, interval) {
     })
 }
 
-function startTimeChangeFly() {
-    let timeChangeFly = setInterval(function() {
-        changeFly()
-        lostLifes++
-        console.log("perdeu")
-        gameOver()
-    }, timeChageFly * 1000)
-    stopIntervalByClick(fly, timeChangeFly)
-}
-
-startTimeChangeFly()
-fly.addEventListener("click", function() {
-    startTimeChangeFly()
-    changeFly()
-    console.log("acertou!")
-})
-
-function gameOver() {
-    if (lostLifes === 1) {
+function gameOver(x) {
+    if (x === 1) {
         document.getElementById("life1").setAttribute("src", "../images/empty-heart.png")
     }
     
-    if (lostLifes === 2) {
+    if (x === 2) {
         document.getElementById("life2").setAttribute("src", "../images/empty-heart.png")
     }
     
-    if (lostLifes === 3) {
+    if (x === 3) {
         document.getElementById("life3").setAttribute("src", "../images/empty-heart.png")
         location.href = "game-over.html"
     }
 }
 
+function verificLevel() {
+    const local = location.search
+    let x = 0
+    if (local === "?game-level=l1") {
+        x = 2.25
+    }
+
+    if (local === "?game-level=l2") {
+        x = 1.75
+    }
+
+    if (local === "?game-level=l3") {
+        x = 1.25
+    }
+    return x * 1000
+}
+
+function bodyLoad() {
+    changeFly()
+    timerToEnd(100)
+    startTimeChangeFly(verificLevel())
+}
+
+let lostLifes = 0
+function startTimeChangeFly(time) {
+    let timeChangeFly = setInterval(function() {
+        changeFly()
+        lostLifes++
+        gameOver(lostLifes)
+    }, time)
+    stopIntervalByClick(fly, timeChangeFly)
+}
+
+fly.addEventListener("click", function() {
+    startTimeChangeFly(verificLevel())
+    changeFly()
+})
