@@ -3,6 +3,10 @@
     margin-bottom: 5px;
 }
 
+form {
+    cursor: default;
+}
+
 #game-level {
     margin-bottom: 20px;
     padding: 10px 30px 10px 20px;
@@ -13,4 +17,5 @@
     background-repeat: no-repeat;
     background-size: 12px;
     background-position: 95% center;
+    cursor: pointer;
 }
