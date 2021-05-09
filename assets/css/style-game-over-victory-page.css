@@ -1,0 +1,30 @@
+.conteiner > div {
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+#conteiner-image > img {
+    width: 400px;
+}
+
+#conteiner-points {
+    width: 400px;
+    height: 300px;
+    color: white;
+    text-shadow: -2px 2px 3px rgb(230, 230, 230);
+}
+
+#conteiner-points > p {
+    font-size: 50px;
+}
+
+#user-points {
+    font-size: 100px;
+}
+
+#conteiner-btn {
+    flex-basis: 100%;
+    text-align: center;
+}

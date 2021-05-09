@@ -6,7 +6,7 @@ function timerToEnd(seconds) {
             seconds--
             timeToTheEnd.innerHTML = seconds
             if (seconds === 0) {
-                location.href="victory.html"
+                location.href="victory.html?points=" + winnerPoints
             }
         }, 
         1000)

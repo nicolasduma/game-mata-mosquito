@@ -76,7 +76,7 @@ function gameOver(x) {
     
     if (x === 3) {
         document.getElementById("life3").setAttribute("src", "../images/empty-heart.png")
-        location.href = "game-over.html"
+        location.href = "game-over.html?points=" + winnerPoints
     }
 }
 
@@ -113,7 +113,11 @@ function startTimeChangeFly(time) {
     stopIntervalByClick(fly, timeChangeFly)
 }
 
+let winnerPoints = 0
+
 fly.addEventListener("click", function() {
     startTimeChangeFly(verificLevel())
     changeFly()
+    winnerPoints = winnerPoints + 10
+    document.getElementById("points").innerHTML = winnerPoints
 })

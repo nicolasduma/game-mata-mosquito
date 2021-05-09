@@ -6,14 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mata Mosquito - VITÓRIA</title>
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style-game-over-victory-page.css">
 </head>
-<body>
+<body onload="innerPoints()">
     <div class="display-flex justify-content-center align-items-center conteiner">
-        <div class="display-flex flex-direction-column justify-content-center align-items-center conteiner-simple">
-            <img src="../images/victory.png" alt="Você Venceu!">
+        <div class="display-flex align-items-center">
+            <div id="conteiner-image">
+                <img src="../images/victory.png" alt="Você Venceu!">
+            </div>
 
-            <a class="btn-game" href="../../index.html">Reiniciar</a>
+            <div id="conteiner-points" class="display-flex flex-direction-column justify-content-center align-items-center">
+                <p>Pontuação:</p><span id="user-points"></span>
+            </div>
+
+            <div id="conteiner-btn">
+                <a class="btn-game" href="../../index.html">Reiniciar</a>
+            </div>
         </div>
     </div>
+
+    <script src="../js/write-points.js"></script>
 </body>
 </html>

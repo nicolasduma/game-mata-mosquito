@@ -19,7 +19,7 @@
     font-weight: 600;
 }
 
-#conteiner-time {
+#conteiner-time, #conteiner-points {
     margin-top: 5px;
     gap: 5px;
 }
