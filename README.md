@@ -11,4 +11,4 @@
   <img src=".github/demo.gif" alt="Demo Game Mata Mosquito">
 </div>
 
-## ℹ About project
+## ℹ About the project
