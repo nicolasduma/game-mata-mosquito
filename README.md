@@ -9,6 +9,12 @@
 ## 📷 Demo
 <div align="center">
   <img src=".github/demo.gif" alt="Demo Game Mata Mosquito">
+
+  <h3>
+
+  🕹 [TEST GAME](https://nicolasrafaelduma.github.io/Game-Mata-Mosquito/) 🕹
+  
+  </h3>
 </div>
 
 ## ℹ About the project
