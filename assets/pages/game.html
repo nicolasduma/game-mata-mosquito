@@ -34,4 +34,21 @@
     <script src="../js/change-fly.js"></script>
 </body>
 
+<script>
+    const title = document.getElementsByTagName("title")[0]
+    const local = location.search
+
+    if (local === "?game-level=l1") {
+        title.innerHTML = title.innerHTML + "Fácil"
+    }
+
+    if (local === "?game-level=l2") {
+        title.innerHTML = title.innerHTML + "Normal"
+    }
+
+    if (local === "?game-level=l3") {
+        title.innerHTML = title.innerHTML + "Difícil"
+    }
+</script>
+
 </html>
